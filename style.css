@@ -38,11 +38,15 @@ body{
 .search-box button{
     padding: 15px 0;
     width: 25% ;
-    background-color: #d79cff;
+    background-color: #b13ffd;
+    
     border: none;
     outline: none;
     color: #ffffff;
     border-radius: 5px;
+}
+.search-box button:active{
+    background-color: #d79cff;
 }
 
 .result h3{
@@ -67,4 +71,18 @@ body{
     display: flex;
     gap: 10px;
     color: #b3b6d4;
+    margin: 5px 0px 20px 0px;
+    font-size: 14px;
+
+}
+.word-meaning{
+    color: #575a7b;
+}
+.word-example{
+    color: #575a7b;
+font-style: italic;
+border-left: #d79cff 5px solid;
+padding-left: 20px;
+margin-top: 30px;
+
 }
