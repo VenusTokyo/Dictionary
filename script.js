@@ -11,7 +11,7 @@ btn.addEventListener("click", () => {
             console.log(data)
             result.innerHTML = `<div class="word">
         <h3>${inpword}</h3>
-        <button>
+        <button onClick="playSound()">
             <i class="fa-solid fa-volume-high"></i>
         </button>
     </div>
@@ -21,5 +21,12 @@ btn.addEventListener("click", () => {
     </div>
     <p class="word-meaning">${data[0].meanings[0].definitions[0].definition}</p>
     <p class="word-example">${data[0].meanings[0].definitions[0].example || ""}</p>`
+            sound.setAttribute("src", `${data[0].phonetics[0].audio || data[0].phonetics[1].audio }`)
+            
+        }).catch(()=>{
+            result.innerHTML=`<h2 class="error">Sorry pal, we couldn't find definitions for the word you were looking for.</h2>`
         })
 })
+function playSound(){
+    sound.play()
+}
